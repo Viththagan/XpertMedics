@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteRule ^(app|assets|audio|fancybox|plugins|temp|uploads)($|/) - [L]
+RewriteRule ^(ajax_image.php|index.php|remote.php|upay.php)($|/) - [L]
+RewriteRule ^(manifest.json|_manifest.json|noti.json|sw.js|_service-worker.js|bill_payments_manual.php)($|/) - [L]
+RewriteRule ^([^/]*)$ index.php?branch=$1 [L,QSA]
+RewriteRule ^([^/]*)/([^/]*)$ index.php?branch=$1&second=$2 [L,QSA]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)$ index.php?branch=$1&second=$2&third=$3 [L,QSA]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)$ index.php?branch=$1&second=$2&third=$3&fourth=$4 [L,QSA]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)$ index.php?branch=$1&second=$2&third=$3&fourth=$4&fifth=$5 [L,QSA]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)$ index.php?branch=$1&second=$2&third=$3&fourth=$4&fifth=$5&sixth=$6 [L,QSA]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)$ index.php?branch=$1&second=$2&third=$3&fourth=$4&fifth=$5&sixth=$6&seventh=$7 [L,QSA]
